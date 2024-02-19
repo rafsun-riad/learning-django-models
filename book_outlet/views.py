@@ -14,9 +14,9 @@ def index(request):
     )
 
 
-def book_detail(request, id):
+def book_detail(request, slug):
     try:
-        book = Book.objects.get(pk=id)
+        book = Book.objects.get(slug=slug)
     except:
         raise Http404()
 
